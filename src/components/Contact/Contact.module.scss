@@ -1,0 +1,19 @@
+@import '../../UI/global.scss';
+@import '../../UI/animation.scss';
+
+
+.contactContainer {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+
+@media (max-width: $ipad) {
+  .contactContainer {
+    display: grid;
+    gap: 10px;
+  }
+}

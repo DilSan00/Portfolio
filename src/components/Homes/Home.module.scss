@@ -1,0 +1,127 @@
+@import '../../UI/global.scss';
+@import '../../UI/animation.scss';
+
+
+.home {
+  padding: 120px 0;
+  background: transparent;
+  
+  &Container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    animation: leftAnimate 1.2s forwards;
+  }
+
+  &Avatar {
+    width: 400px;
+    height: 300px;
+    background-color: $accent;
+    border-radius: 20px;
+    animation: rightAnimate .8s forwards;
+  }
+
+  &Title {
+    font-size: 40px;
+    color: #ddd ;
+    animation: leftAnimate .8s forwards;
+
+    span {
+      color: $accent;
+    }
+  }
+  
+  &Description {
+    color: $white;
+    font-size: 18px;
+    width: 400px;
+    animation: leftAnimate 1s forwards;
+  }
+
+  &Btn {
+    text-decoration: none;
+    color: $dark;
+    padding: 10px 20px; 
+    background-color: $accent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; 
+
+    &:hover {
+      background-color: darken($accent, 10%);
+    }
+  }
+
+}
+
+
+
+
+// Адаптация для планшетов (до 768px)
+@media (max-width: $ipad) {
+  .home {
+    padding: 60px 0; 
+
+    &Container {
+      flex-direction: column; 
+      align-items: center; 
+    }
+
+    &Avatar {
+      width: 300px; 
+      height: 225px;
+    }
+
+    &Title {
+      font-size: 32px; 
+    }
+
+    &Description {
+      font-size: 16px; 
+      width: 100%; 
+    }
+
+    &Btn {
+      padding: 8px 16px;
+      font-size: 14px; 
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// Адаптация для маленьких экранов (до 480px)
+@media (max-width: $mobile) {
+  .home {
+    padding: 30px 0; // Дополнительное уменьшение отступов для маленьких экранов
+
+    &Container {
+      padding: 0 10px; // Добавление боковых отступов
+    }
+
+    &Avatar {
+      width: 200px; // Дополнительное уменьшение размеров аватара
+      height: 150px;
+    }
+
+    &Title {
+      font-size: 24px; // Дополнительное уменьшение размера шрифта
+    }
+
+    &Description {
+      font-size: 14px; // Дополнительное уменьшение размера шрифта
+      width: 100%; // Ширина описания по всей доступной ширине
+    }
+
+    &Btn {
+      padding: 6px 12px; // Дополнительное уменьшение отступов кнопки
+      font-size: 12px; // Дополнительное уменьшение размера шрифта
+      text-align: left;
+    }
+  }
+}

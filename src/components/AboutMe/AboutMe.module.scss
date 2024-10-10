@@ -1,0 +1,63 @@
+@import '../../UI/global.scss';
+@import '../../UI/animation.scss';
+
+.about {
+  padding: 120px 0;
+
+  &Goal {
+    display: grid;
+    gap: 20px;
+  }
+
+  &Item {
+    font-size: 26px;
+    color: $white;
+    animation: topAnimate .8s forwards;
+  }
+
+}
+
+.accent {
+  font-size: 30px;
+  color: $accent;
+  font-weight: bold;
+  text-align: center;
+  animation: bottomAnimate .8s forwards;
+}
+
+
+@media (max-width: $ipad) {
+  .about {
+    padding: 60px;
+
+    &Goal {
+      gap: 10px;
+    }
+
+    &Item {
+      font-size: 20px;
+    }
+  }
+
+  .accent {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .about {
+    padding: 30px;
+
+    &Goal {
+      gap: 8px;
+    }
+
+    &Item {
+      font-size: 16px;
+    }
+  }
+
+  .accent {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../UI/global.scss';
+@import '../../UI/animation.scss';
+
+.skills {
+  padding: 40px 0;
+
+  &Progress {
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    animation: topAnimate .8s ease;
+  }
+}
+
+
+.language {
+  width: 100%;
+  background-color: $second-color;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $accent;
+
+    h1 {
+      color: $bg-color;
+    }
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: $accent;
+    text-align: center;
+    margin-bottom: 10px;
+    animation: leftAnimate .9s ease;
+  }
+
+  ul {
+    display: grid;
+    gap: 10px;
+  }
+
+  li {
+    color: $dark;
+    font-size: 18px;
+    animation: leftAnimate .8s ease;
+  }
+}
+
+
+
+
+@media (max-width: $ipad) {
+  .skills {
+    padding: 20px 0;
+
+    &Progress {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+
+  .language {
+    &:hover {
+      transform: scale(1.06);
+    }
+
+    h1 {
+      font-size: 18px;
+    }
+
+    li {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .skills {
+    padding: 10px 0;
+
+    &Progress {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  .language {
+    &:hover {
+      transform: scale(.94);
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+
+    li {
+      font-size: 14px;
+    }
+  }
+}

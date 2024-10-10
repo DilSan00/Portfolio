@@ -1,0 +1,46 @@
+@import '../../UI/global.scss'; 
+@import '../../UI/animation.scss';
+
+
+
+::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+.projects {
+  padding: 30px 0;
+  
+  &Column {
+    height: 480px;
+    display: grid;
+    gap: 16px;
+    overflow-x: hidden;
+    padding: 10px 50px;
+    animation: topAnimate .8s ease forwards;
+  }
+}
+
+
+
+@media (max-width: $ipad) {
+  .projects {
+    &IMG {
+      display: none;
+    }
+
+    &Column {
+      height: 90%;
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .projects {
+    &IMG {
+      display: none;
+    }
+
+  }
+}

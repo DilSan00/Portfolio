@@ -1,0 +1,108 @@
+@import '../../../UI/global.scss';
+@import '../../../UI/animation.scss';
+
+
+
+.mycontact {
+  display: grid;
+  gap: 20px;
+
+  &Title {
+    color: $accent;
+    font-size: 26px;
+    background-color: $second-color;
+    border-radius: 20px;
+    padding: 20px;
+    animation: leftAnimate .5s ease forwards;
+  }
+
+  &Description {
+    color: $dark;
+    font-size: 20px;
+    background-color: $second-color;
+    border-radius: 20px;
+    padding: 20px;
+    animation: leftAnimate .8s ease forwards;
+  }
+
+}
+
+.mycontactInfo {
+  display: grid;
+  gap: 10px;
+  background-color: $second-color;
+  border-radius: 20px;
+  padding: 20px;
+  animation: leftAnimate 1s ease forwards;
+
+  &Label {
+    color: $dark;
+  }
+
+  &Link {
+    text-decoration: none;
+    color: $white;
+    transition: all .3s ease;
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+
+
+@media (max-width: $ipad) {
+  .mycontact {
+    gap: 10px;
+  
+    &Title {
+      font-size: 22px;
+    }
+  
+    &Description {
+      font-size: 16px;
+    }
+  
+  }
+  
+  .mycontactInfo {
+    display: grid;
+    gap: 8px;
+
+    &Label {
+      font-size: 18px;
+    }
+  
+    &Link {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .mycontact {
+    gap: 8px;
+  
+    &Title {
+      font-size: 18px;
+    }
+  
+    &Description {
+      font-size: 12px;
+    }
+  
+  }
+  
+  .mycontactInfo {
+    display: grid;
+    gap: 8px;
+
+    &Label {
+      font-size: 16px;
+    }
+  
+    &Link {
+      font-size: 12px;
+    }
+  }
+}

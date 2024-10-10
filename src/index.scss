@@ -1,0 +1,64 @@
+@import './UI/global.scss';
+
+:root {
+  font-family: $mainFont;
+  font-weight: 400;
+  background-color: $bg-color;
+  overflow: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  border: none;
+  background-color: $accent;
+}
+
+
+// Apaptives
+@media (max-width: $ipad) {
+  :root {
+    overflow: auto;
+  }
+  .container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+}
+
+
+@media (max-width: $mobile) {
+  :root {
+    overflow: auto;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
